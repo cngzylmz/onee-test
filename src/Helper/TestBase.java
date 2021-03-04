@@ -41,9 +41,9 @@ public class TestBase {
 
 	@BeforeSuite 
 	public void beforeSuite() {
-
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\cngz\\Desktop\\eclipse\\workspace\\Selenium\\selenium-pack\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Users\\cngz\\Desktop\\eclipse\\workspace\\Selenium\\selenium-pack\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -53,7 +53,7 @@ public class TestBase {
 
 	@AfterSuite
 	public void afterSuite() {
-//		driver.quit();
+		driver.quit();
 	}
 
 	/*
