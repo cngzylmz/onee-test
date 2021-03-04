@@ -1,3 +1,5 @@
+package Tests;
+
 import Helper.OneeMethods;
 import Helper.TestBase;
 import Helper.TestParameters;
