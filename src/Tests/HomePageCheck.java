@@ -4,12 +4,11 @@ import Helper.OneeMethods;
 import Helper.TestBase;
 import Helper.TestParameters;
 import JsonHelper.ReadJson;
-import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import Helper.OneeWebElements;
 
-public class HomePageCheck extends TestBase implements TestParameters, OneeMethods ,ReadJson {
+
+public class HomePageCheck extends TestBase implements TestParameters, OneeMethods, ReadJson {
 
     @Test(priority = 2)
     public void newestCheck() {
@@ -21,13 +20,14 @@ public class HomePageCheck extends TestBase implements TestParameters, OneeMetho
     @Test(priority = 1)
     public void mostPopularCheck() {
         driver.get(testUrl);
-        responseCode(driver.getCurrentUrl(),responseCode);
+        responseCode(driver.getCurrentUrl(), responseCode);
         homePage(driver).mostPopular();
     }
 
     @Test(priority = 3)
     public void logoCheck() throws InterruptedException {
         homePage(driver).logoCheck();
+        loginPage(driver).loginButton.click();
     }
 
     @Test(priority = 4)
@@ -35,3 +35,4 @@ public class HomePageCheck extends TestBase implements TestParameters, OneeMetho
         homePage(driver).trendingDestination();
     }
 }
+//test
